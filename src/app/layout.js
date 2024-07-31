@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
             </g>
         </svg>
         <div className="max-w-screen-sm relative mx-auto">
-          <main className="p-4 sm:px-12 flex flex-col items-center w-full absolute " style={{ top: '100px' }}>
+          <main className="p-4 sm:px-12 w-full absolute " style={{ top: '-280px' }}>
           {children}
           </main>
         </div>
