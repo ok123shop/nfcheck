@@ -10,9 +10,9 @@ export default function Support() {
           <h2 className="card-title">情况一</h2>
           <h2 className="card-title text-sm">点击《正在旅行》 或 《暂时观看》</h2>
           <div className="flex w-full flex-col border-opacity-50">
-            <div className="card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
+            <div className="card bg-base-300 rounded-box grid h-20 place-items-center">图片还未上传</div>
             <div className="divider">OR</div>
-            <div className="card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
+            <div className="card bg-base-300 rounded-box grid h-20 place-items-center">图片还未上传</div>
           </div>
         </div>
       </div>
@@ -22,9 +22,9 @@ export default function Support() {
           <h2 className="card-title">情况二</h2>
           <h2 className="card-title text-sm">点击更新同户装置</h2>
           <div className="flex w-full flex-col border-opacity-50">
-            <div className="card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
+            <div className="card bg-base-300 rounded-box grid h-20 place-items-center">图片还未上传</div>
             <div className="divider">OR</div>
-            <div className="card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
+            <div className="card bg-base-300 rounded-box grid h-20 place-items-center">图片还未上传</div>
           </div>
         </div>
       </div>

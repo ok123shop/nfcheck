@@ -38,6 +38,10 @@ export default function Home() {
         setMsg(data.msg)
         return;
       }
+      if(!data.data){
+        setMsg("尚未获取到有效的邮件，请重新尝试")
+        return;
+      }
       setMsg("获取成功，请点击下方按钮跳转至《奈飞》官网查看")
       setSuccess(true)
       setLinkResult(data.data.url)
