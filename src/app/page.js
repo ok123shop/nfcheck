@@ -34,7 +34,8 @@ export default function Home() {
         return;
       }
       const data = await response.json();
-      console.log(data);  // 处理获取的数据
+      data.success = true;
+      data.data = {url: 'https://baidu.com'}
       if(!data.success){
         setMsg(data.msg)
         return;
@@ -105,7 +106,7 @@ export default function Home() {
         <div className="modal-box">
           <div className="flex items-center gap-3">
             <div className="font-bold text-xl flex-1">正在获取结果</div>
-            <div className="badge badge-warning badge-lg text-white">通常需要10 - 30秒</div>
+            <div className="badge badge-warning badge-lg text-white">通常需要20 - 80秒</div>
           </div>
           
           <p className="py-4 text-gray-500">获取到结果后，将会自动为您跳转至《奈飞》官网查看，请务必保证您当前网络可以正常访问《奈飞官网》</p>
@@ -115,7 +116,7 @@ export default function Home() {
             { loading ? 
               (<span className="loading loading-infinity loading-lg text-error "></span>) 
               : 
-              (<p className={`py-4 text-xl font font-bold ${success ? 'text-green-500' : 'text-red-500'}`}>{msg}</p>)
+              (<p target="_blank" className={`py-4 text-xl font font-bold ${success ? 'text-green-500' : 'text-red-500'}`}>{msg}</p>)
             }
           </div>
           
@@ -125,7 +126,7 @@ export default function Home() {
             <form method="dialog">
               {
                 success ? 
-                (<a href={linkResult} className="btn btn-success text-white" onClick={linkHandler}>前往奈飞查看验证结果</a>)
+                (<a href={linkResult} className="btn btn-success text-white" >前往奈飞查看验证结果</a>)
                 :
                 (<button className="btn">放弃获取</button>) 
               }
