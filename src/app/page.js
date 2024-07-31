@@ -34,8 +34,6 @@ export default function Home() {
         return;
       }
       const data = await response.json();
-      data.success = true;
-      data.data = {url: 'https://baidu.com'}
       if(!data.success){
         setMsg(data.msg)
         return;
