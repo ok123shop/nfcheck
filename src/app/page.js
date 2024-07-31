@@ -8,6 +8,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [success, setSuccess] = useState(false);
+  const [linkResult, setLinkResult] = useState(false);
   const [msg, setMsg] = useState('正在获取中...');
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
@@ -38,11 +39,10 @@ export default function Home() {
         setMsg(data.msg)
         return;
       }
-      setMsg("获取成功，即将为您跳转至奈飞官网")
+      setMsg("获取成功，请点击下方按钮跳转至《奈飞》官网查看")
       setSuccess(true)
-      setTimeout(() => {
-        window.open(data.data.url)
-      }, 1000);
+      setLinkResult(data.data.url)
+
 
     } catch (error) {
       setMsg(error.toString())
@@ -123,7 +123,12 @@ export default function Home() {
 
           <div className="modal-action">
             <form method="dialog">
-              <button className="btn">放弃获取</button>
+              {
+                success ? 
+                (<a href={linkResult} className="btn btn-success text-white" onClick={linkHandler}>前往奈飞查看验证结果</a>)
+                :
+                (<button className="btn">放弃获取</button>) 
+              }
             </form>
           </div>
         </div>
