@@ -1,7 +1,11 @@
 "use client"
 
 import Image from "next/image";
+import HelpCard from "./components/helpCard"
+import Ok123Card from "./components/ok123Card"
+import VpnCard from "./components/vpnCard"
 import { useRef, useState, useEffect } from 'react';
+
 
 export default function Home() {
   const modalRef = useRef(null);
@@ -55,6 +59,7 @@ export default function Home() {
   }
 
 
+
   return (
     <div className="flex flex-col items-center ">
       <div className="text-3xl font-bold my-4 text-white">同户验证</div>
@@ -104,6 +109,15 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="divider"></div>
+      <div className="flex flex-col justify-center items-center gap-4">
+        <Ok123Card/>
+        <VpnCard/>
+        <HelpCard/>
+      </div>
+
+
+
       <dialog id="my_modal_1" className="modal" ref={modalRef}>
         <div className="modal-box">
           <div className="flex items-center gap-3">
