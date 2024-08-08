@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
         <div className="max-w-screen-sm relative mx-auto">
           <main className="p-4 sm:px-12 w-full " style={{ marginTop: '-280px' }}>
           {children}
+          <SpeedInsights />
           </main>
         </div>
         <div className="mt-40">
